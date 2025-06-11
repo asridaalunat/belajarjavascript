@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belajar JQuery</title>
+    <style>
+        .lampu {
+            width: 100px;
+            height: 100px;
+            background: #6009d1;
+            border-radius: 50%;
+            transition: all ease-in-out 0.5s;
+        }
+    </style>
+  </head>
+  <body>
+
+    <button id="tombol">Hidupkan Lampu</button><br><br>
+    <div class="lampu kuning"></div><br>
+    <div class="lampu merah"></div><br>
+    <div class="lampu hijau"></div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        var stslampu = false;
+    $("#tombol").click(function(){
+        if(stslampu){
+            stslampu = false;
+            $(".lampu").css("background","purple");
+            $("#tombol").text("Hidupkan Lampu");
+        }else{
+            stslampu = true;
+            $(".lampu.kuning").css("background","yellow");
+        setTimeout(function(){
+             $(".lampu.merah").css("background","red");
+        },1000);
+        setTimeout(function(){
+             $(".lampu.hijau").css("background","green");
+        },2000);
+        $("#tombol").text("Matikan Lampu");
+    }
+    })
+    </script>
+  </body>
+</html>

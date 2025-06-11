@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belajar Gambar</title>
+  </head>
+  <body>
+    <img id="gambar" src="pngtree-anime-girl-in-hoodie-coloring-pages-vector-png-image_6786300.png" width="20%">
+    <h1 id="kata">IDAA!!</h1>
+    <img id="gambar" src="pngtree-cartoon-pair-of-young-friends-png-image_9181504.png" width="20%">
+    <h1 id="kata">BAAA!!</h1>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+    <script>
+        var stsgambar = true;
+        $("#gambar").click(function(){
+            if(stsgambar){
+                stsgambar = true;
+            $("#gambar").attr("src","pngtree-anime-girl-in-hoodie-coloring-pages-vector-png-image_6786300.png");
+            $("#kata").text("BAAA!!");
+        }else {
+            stsgambar = true;
+            $("gambar").attr("src","pngtree-cartoon-pair-of-young-friends-png-image_9181504.png");
+            $("#kata").text("IDAA!!");
+        }
+    });
+    </script>
+  </body>
+</html>
